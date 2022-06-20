@@ -55,7 +55,7 @@ Creates on table with below columns:
 api_os.py
   
 Makes API calls to OpenSea:
-  - get_price. Fetch current FP for particular collection - "https://api.opensea.io/api/v1/collection/<collection name>"
+  - get_price. Fetch current FP for particular collection - "https://api.opensea.io/api/v1/collection/" + <collection name>
   - check_collection. Fetch collection name from OpenSea in order to verify if name is correct and exists.
   
   
