@@ -37,3 +37,30 @@
 3. There is also an option to get price for all saved collection - Get Price. (will fetch FP price for all collections user added)
   
 
+
+<b>How it works.<b>
+  
+  
+db_service
+  
+Creates on table with below columns:
+  - chat_id (telegram chat id, unique per user)
+  - name (name of telegram user, can be not unique)
+  - collection (NFT collection added by user)
+  - current_price (FP for NFT collection)
+  - percentage (by default 0, on what FP change update user)
+  - timestamp (updated everytime when FP was updated)
+  
+  
+api_os.py
+  
+Makes API calls to OpenSea:
+  - get_price. Fetch current FP for particular collection - "https://api.opensea.io/api/v1/collection/<collection name>"
+  - check_collection. Fetch collection name from OpenSea in order to verify if name is correct and exists.
+  
+  
+main.py
+  
+
+  
+
